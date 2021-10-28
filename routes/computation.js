@@ -14,7 +14,10 @@ router.get('/', function (req, res, next) {
             value=Math.round(Math.random()*900);
         }
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write('Math.sinh() applied to ' + value + ' is ' + Math.sinh(value))
+        res.write('Math.sinh() applied to ' + value + ' is ' + Math.abs(value));
+        res.write('<br>Math.sinh() applied to ' + value + ' is ' + Math.acos(value))
+        res.write('<br>Math.sinh() applied to ' + value + ' is ' + Math.sin(value))
+        res.write('<br>Math.sinh() applied to ' + value + ' is ' + Math.sinh(value))
         res.end()
     }
 });
